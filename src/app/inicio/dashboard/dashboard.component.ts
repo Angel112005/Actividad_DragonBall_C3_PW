@@ -17,7 +17,7 @@ export class DashboardComponent {
     this.apiService.getCharacters().subscribe({
       next: (data) => {
         this.characters = data;
-        console.log("Characters loaded:", data);  // Log para verificar los datos cargados
+        console.log("Characters loaded:", data);  
       },
       error: (error) => console.error('There was an error!', error)
     });
