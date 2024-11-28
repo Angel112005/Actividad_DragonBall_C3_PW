@@ -12,19 +12,13 @@
           <li>Gender: {{ character.gender }}</li>
           <li>Affiliation: {{ character.affiliation }}</li>
         </ul>
-        <!-- Botón Transformaciones -->
+        <!-- Botón para ir a la vista de Transformaciones -->
         <button
-          (click)="showTransformations(character.id)"
+          [routerLink]="['/transformations', character.id]"
           class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
           Transformaciones
         </button>
       </div>
     </div>
   </div>
-
-  <!-- Componente de Transformaciones -->
-  <app-character-transformations
-    *ngIf="selectedTransformations.length > 0"
-    [transformations]="selectedTransformations">
-  </app-character-transformations>
 </div>
