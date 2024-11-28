@@ -1,0 +1,19 @@
+<!-- src/app/inicio/dashboard/dashboard.component.html -->
+<div class="container mx-auto mt-8">
+  <div *ngFor="let character of characters" class="bg-gray-800 text-white p-6 rounded-lg shadow-md mb-6">
+    <div class="flex items-center space-x-4">
+      <img [src]="character.image" alt="Image of {{ character.name }}" class="w-24 h-24 rounded-full">
+      <div>
+        <h2 class="text-xl font-bold">{{ character.name }}</h2>
+        <p>{{ character.description }}</p>
+        <ul>
+          <li>Ki: {{ character.ki }}</li>
+          <li>Max Ki: {{ character.maxKi }}</li>
+          <li>Race: {{ character.race }}</li>
+          <li>Gender: {{ character.gender }}</li>
+          <li>Affiliation: {{ character.affiliation }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
