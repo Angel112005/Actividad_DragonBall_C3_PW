@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { InicioModule } from './inicio/inicio.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CharacterTransformationsComponent } from './character-transformations/character-transformations.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

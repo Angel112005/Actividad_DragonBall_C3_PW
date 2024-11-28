@@ -8,4 +8,13 @@ export interface Character {
   description: string;
   image: string;
   affiliation: string;
+  transformations?: Transformation[]; // Propiedad opcional para las transformaciones
+}
+
+// Interfaz para las transformaciones
+export interface Transformation {
+  id: number;
+  name: string;
+  image: string;
+  ki: string;
 }
