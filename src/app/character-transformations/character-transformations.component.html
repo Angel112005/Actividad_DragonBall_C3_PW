@@ -1,0 +1,15 @@
+<div class="container mx-auto mt-8 text-white">
+  <h1 class="text-3xl font-bold mb-4">{{ characterName }} - Transformaciones</h1>
+
+  <div *ngIf="transformations.length > 0; else noTransformations" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div *ngFor="let transformation of transformations" class="bg-gray-800 p-4 rounded-lg shadow-md">
+      <img [src]="transformation.image" alt="{{ transformation.name }}" class="w-full h-48 object-cover rounded-md mb-2">
+      <h2 class="text-xl font-bold">{{ transformation.name }}</h2>
+      <p>Ki: {{ transformation.ki }}</p>
+    </div>
+  </div>
+
+  <ng-template #noTransformations>
+    <p class="text-center text-gray-400">No hay transformaciones disponibles para este personaje.</p>
+  </ng-template>
+</div>
